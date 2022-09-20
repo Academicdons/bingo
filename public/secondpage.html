@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/secondpage.css">
+   
+</head>
+<div class="navigation">
+  <a href="notification.html" class="noty"></a>
+  <button type="button" class="bella" onclick="window.alert('you have no new notifications')">
+    <img height="30px" src="images/close.png">
+  </button>
+  <a class="activa" href="promo.html"> home </a>
+  <a  id="sesh"onclick="getElementById('book2').style.display='block';getElementById('sesh')" class="booky"> Book a Session</a>
+  <a href="Events" class="eventy"> Library</a>
+  <a href="skills" class="sign"> Sign up</a>
+  <a href="mastering.html" class="mast"> Master your tracks</a>
+  <a href="contacts" class="contacts"> contact us</a>
+  
+
+</div>
+<body>
+ <div class="container">
+    <div class="musicplayer">
+      <div class="player">
+      <img src="/www/images/rec label.png"class="record" class="record">
+      <h2 id="title"> Song name</h2>
+      <div class="slidecontainer">
+         <i class="fa fa-volume-down"></i>
+         <input type="range" min="0" max="100" value="50 " class="slider">
+         <i class="fa  fa-volume-up"></i>
+     </div> 
+     <div class="controls">
+       <button class="previous" id="previous"><i class="fa fa-step-backward"></i> </button>
+       <button class="play-pause" id="play-pause"> <i class="fa fa-play"></i></button>
+        <button class="previous" id="previous"><i class="fa fa-step-backward"></i> </button>
+     </div>  
+      </div>
+
+      
+      <div class="playlist">
+        <h2> Playlist</h2>
+        <ul class="song list">
+          <li data-src="/www/sounds/queen.mp3" data-name="YOLO" data-index="0"><span> YOLO </span><span> 3:00</span></li>
+          <li data-src="/www/sounds/amazon.mp3" data-name="YOLO"><span> YOLO </span><span> 3:00</span></li>
+          <li data-src="/www/sounds/queen.mp3" data-name="Queen A Mine"> <span> Queen A mine</span><span> 2:00</span></li>
+          <li data-src="/www/sounds/amazon.mp3" data-name="YOLO"><span> YOLO </span><span> 3:00</span></li>
+          <li data-src="/www/sounds/amazon.mp3" data-name="YOLO"><span> YOLO </span><span> 3:00</span></li>
+          <li data-src="/www/sounds/amazon.mp3" data-name="YOLO"><span> YOLO </span><span> 3:00</span></li>
+          <li data-src="/www/sounds/amazon.mp3" data-name="YOLO"><span> YOLO </span><span> 3:00</span></li>
+          <li data-src="/www/sounds/amazon.mp3" data-name="YOLO"><span> YOLO </span><span> 3:00</span></li>
+        </ul>
+        <audio src="" id="audio"> </audio>
+      </div>
+    </div>
+  </div>
+    
+  
+  <div class= "contentbox">
+    <img src="/www/images/rec label.png"class="record" class="record">
+
+
+    <div id="title">
+      <span id="track"></span>
+      <div id="timer">0:00</div>
+      <div id="duration">0:00</div>
+    </div>
+  
+    <!-- Controls -->
+    <div class="controlsOuter">
+      <div class="controlsInner">
+        <div id="loading"></div>
+        <div class="btn" id="playBtn"></div>
+        <div class="btn" id="pauseBtn"></div>
+        <div class="btn" id="prevBtn"></div>
+        <div class="btn" id="nextBtn"></div>
+        
+      </div>
+      <div class="btn" id="playlistBtn"></div>
+      <div class="btn" id="volumeBtn"></div>
+    </div>
+  
+    <!-- Progress -->
+    <div id="waveform"></div>
+    <div id="bar"></div>
+    <div id="progress"></div>
+  
+    <!-- Playlist -->
+    <div ul id="playlist">
+      <div  id="list"></div>
+    </div>
+  
+    <!-- Volume -->
+    <div id="volume" class="fadeout">
+      <div id="barFull" class="bar"></div>
+      <div id="barEmpty" class="bar"></div>
+      <div id="sliderBtn"></div>
+    </div>
+  </div>
+  
+  
+  <iframe name="rada" style="display:none;" onload="rieng()"> </iframe>
+  <div id="book2"onclick="getElementById('sesh').style.display='block'; getElementById('book2').style.display='none';" class="book">
+    <input type="image" src="/www/images/close.png" class="close"/>
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScc2N2cZyWd2orl7KoZs9Mb0wmFqTHYEg-DndZjT-SsfSnZeg/formResponse"  method="post" target="rada" onsubmit="safi()">
+ 
+
+  <input type="text" class="margin" placeholder="First name" name="entry.130705262"/></br>
+  <input type="text" placeholder="Last name" name="entry.2111625887"/></br>
+   <input type="text" placeholder="Your email" name="entry.1307132388"/></br>
+   <input type="tel" class="date" placeholder="Phone number" name="entry.12475341"/></br>
+   <select name=" ">
+     <option selected disabled> Services required</option>
+     <option> Audio recording</option>
+     <option> Mixing and mastering</option>
+    <option> Sound Engineering </option>
+    <option> Buy beats</option>
+    <option> Video production</option>
+
+  </select>
+
+   <input type="text" placeholder="Session Duration" name="entry.1950798871"/></br>
+   <input type="text" placeholder="Proceed to pay out" name="entry.1915531570"/> </br>
+    <input type="text" class="date" placeholder="Date" name="entry.491105681"/>
+    <input type="submit" value="submit"/>
+   <form> <input type="text" placeholder=" ENTER YOUR NAME"/></form>br>
+
+  </div>
+  </form>
+  <script src="/public/master2.js"></script>
+    <!-- Scripts -->
+    <script src="/www/src/howler.core.js"></script>
+    <script src="/www/css/wave.js"></script>
+    <script src="/www/css/player.js"></script>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+  
